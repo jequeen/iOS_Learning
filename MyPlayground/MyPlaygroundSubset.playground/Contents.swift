@@ -1,20 +1,38 @@
-//: Playground - noun: a place where people can play
+//Joshua Evan Queen
 
 import UIKit
 
-var str = "Hello, playground"
-
-//Given a set N and an int S, does any non-empty subset sum to in S
-
-let sortedSet: [Int] = [-1,1,3,5,6,7]
-let S = 11
-
-let smallest = sortedSet[0]
-
-//is S is equall to the smallest in the set and non negative then answer no
-if (smallest==S && smallest>=0){
-    print ("no")
-}else if(sortedSet[sortedSet.endIndex-1] < S){
-    print ("yes")
+func printHistogram(arrayVals: [Int]) {
+    var weightsDictionary = [Int: Int]()
     
+    for num in arrayVals{
+        if weightsDictionary.keys.contains(num){
+            weightsDictionary.updateValue((weightsDictionary[num]?.unsafeAdding(1))!, forKey: num)
+        }
+        else{
+            weightsDictionary.updateValue(1, forKey: num)
+        }
+    }
+    print(weightsDictionary)
+    var currMax = weightsDictionary.values.max()
+    
+    while currMax! >= 1{
+        for (_,weight) in weightsDictionary{
+            if ((weight)<currMax!){
+                print(" ", terminator:"")
+            }
+            else{
+                print ("*", terminator:"")
+            }
+        }
+        currMax = currMax!.unsafeSubtracting(1)
+        print()
+    }
+    let lazyMapCollection = weightsDictionary.keys
+    let stringArray = Array(lazyMapCollection.map { String($0) })
+    print(stringArray.joined(separator: ""))
 }
+
+printHistogram(arrayVals: [3, 4, 2, 1, 6, 6, 4, 4])
+
+
