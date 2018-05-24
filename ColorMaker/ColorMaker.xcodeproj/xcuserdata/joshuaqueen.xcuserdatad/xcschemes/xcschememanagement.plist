@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Click Counter.xcscheme</key>
+		<key>ColorMaker.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>56D3C1232059DB8A00D0D8BB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>56D3C1372059DB8A00D0D8BB</key>
+		<key>4D20BB8D1A072A0300A88C83</key>
 		<dict>
 			<key>primary</key>
 			<true/>
